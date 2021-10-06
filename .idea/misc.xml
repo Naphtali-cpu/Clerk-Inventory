@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/add_to_cart_bg.xml" value="0.21574074074074073" />
+        <entry key="app/src/main/res/drawable/dash2.xml" value="0.34014300306435136" />
+        <entry key="app/src/main/res/drawable/nav.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/font/nunito_extrabold.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.3020231213872832" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2105978260869565" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/tabs.xml" value="0.3265625" />
       </map>
     </option>
   </component>

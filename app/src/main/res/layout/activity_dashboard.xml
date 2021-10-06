@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
                 android:text="Hello, "
                 android:textColor="#000"
                 android:textSize="24dp" />
+
             <TextView
                 android:id="@+id/usertext"
                 android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
                 android:layout_marginStart="310dp"
                 android:layout_marginTop="-30dp"
                 android:src="@drawable/naph" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -244,5 +247,21 @@
         </LinearLayout>
     </ScrollView>
 
-
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="#13103C"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="text"
+        app:abb_tabColorSelected="#3F51B5"
+        app:abb_tabs="@menu/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </RelativeLayout>

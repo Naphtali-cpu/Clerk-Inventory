@@ -18,6 +18,7 @@ class Dashboard : AppCompatActivity() {
         val card3 = findViewById(R.id.c3) as CardView
         val card4 = findViewById(R.id.c4) as CardView
 
+
         image.setOnClickListener{
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)

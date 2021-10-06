@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/dash2"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/suppliers"
+        android:icon="@drawable/supp"
+        android:title= "Suppliers" />
+    <item
+        android:id="@+id/products"
+        android:icon="@drawable/cubes"
+        android:title="Products" />
+    <item
+        android:id="@+id/orders"
+        android:icon="@drawable/sent"
+        android:title="Orders" />
+    <item
+        android:id="@+id/delivery"
+        android:icon="@drawable/delivery"
+        android:title="Delivery" />
+</menu>
