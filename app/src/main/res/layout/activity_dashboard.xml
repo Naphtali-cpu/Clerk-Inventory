@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8e2dc"
+    tools:context=".Dashboard">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito_light"
+                android:text="Hello, "
+                android:textColor="#000"
+                android:textSize="24dp" />
+            <TextView
+                android:id="@+id/usertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="-32dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Naphtali, "
+                android:textColor="#000"
+                android:textSize="24dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/naph" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Dashboard "
+                android:textColor="#000"
+                android:textSize="34dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c1"
+                android:layout_width="370dp"
+                android:layout_height="193dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="100dp"
+                app:cardCornerRadius="30dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Analysis"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="65dp"
+                    android:src="@drawable/analysis" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/nunito_light"
+                    android:text="Today: 21 Products"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/nunito_light"
+                    android:text="This Month: 70 Products"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c2"
+                android:layout_width="370dp"
+                android:layout_height="116dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginBottom="100dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="3"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Items Received"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/del" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="330dp"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/rightarrow" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c3"
+                android:layout_width="370dp"
+                android:layout_height="116dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginBottom="100dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="2"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Expired "
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/expirationdate" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="330dp"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/rightarrow" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/c4"
+                android:layout_width="370dp"
+                android:layout_height="116dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginBottom="100dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="5"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="65dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Items in Stock "
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/packages" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="330dp"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/rightarrow" />
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
