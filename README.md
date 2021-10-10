@@ -26,7 +26,6 @@ This is an android application for Inventory and management of stocks.
 
 ## Future Implementation
 
-[comment]: <> (* Add API on Hiking, Cycling, Travel, Wild Tour and Camping activities.)
 
 
 ## Architecture
