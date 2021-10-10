@@ -50,7 +50,6 @@ In information systems, applications architecture or application architecture is
 
 ## Behaviour Driven Development(BDD)
 
-
 ## Technologies Used
 * Kotlin
 * Android
