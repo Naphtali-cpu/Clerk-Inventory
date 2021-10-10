@@ -51,7 +51,6 @@ In information systems, applications architecture or application architecture is
 ## Behaviour Driven Development(BDD)
 
 
-[comment]: <> (* The android application page loads in form of a splash.)
 
 [comment]: <> (* User is required to login or register an account.)
 
