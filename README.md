@@ -23,7 +23,6 @@ This is an android application for Inventory and management of stocks.
 * Run the application on the emulator/USB.
 
 ## Contributors
-So far there are no contributors for this project.
 
 ## Future Implementation
 
