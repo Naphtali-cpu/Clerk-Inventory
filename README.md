@@ -38,7 +38,6 @@ In information systems, applications architecture or application architecture is
 
 ## Bugs
 
-[comment]: <> (* API only fetchs data around USA.)
 
 
 ## Setup and installation
