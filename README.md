@@ -50,7 +50,6 @@ In information systems, applications architecture or application architecture is
 
 ## Behaviour Driven Development(BDD)
 
-[comment]: <> (* After user logs in, user inputs location to look for trails.)
 
 ## Technologies Used
 * Kotlin
