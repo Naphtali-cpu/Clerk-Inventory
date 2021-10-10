@@ -50,10 +50,6 @@ In information systems, applications architecture or application architecture is
 
 ## Behaviour Driven Development(BDD)
 
-
-
-[comment]: <> (* User is required to login or register an account.)
-
 [comment]: <> (* After user logs in, user inputs location to look for trails.)
 
 ## Technologies Used
