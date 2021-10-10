@@ -10,10 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Merchant">
         <activity
-            android:name=".Profile"
+            android:name=".addition.AddItemsInStock"
             android:exported="true" />
         <activity
-            android:name=".AddProducts"
+            android:name=".addition.AddExpiredItems"
+            android:exported="true" />
+        <activity
+            android:name=".addition.AddItemsReceived"
+            android:exported="true" />
+        <activity
+            android:name=".addition.AddDelivery"
+            android:exported="true" />
+        <activity
+            android:name=".addition.AddProducts"
+            android:exported="true" />
+        <activity
+            android:name=".Profile"
             android:exported="true" />
         <activity
             android:name=".ItemDetails"

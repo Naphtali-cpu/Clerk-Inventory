@@ -3,16 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../layout/custom_preview.xml" value="0.240625" />
         <entry key="app/src/main/res/drawable/add_to_cart_bg.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/dash2.xml" value="0.34014300306435136" />
         <entry key="app/src/main/res/drawable/nav.xml" value="0.21574074074074073" />
+        <entry key="app/src/main/res/drawable/plus3.xml" value="0.346875" />
         <entry key="app/src/main/res/font/nunito_extrabold.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_delivery.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_add_items_in_stock.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/activity_add_items_received.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/activity_analysis.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_buyer.xml" value="0.3088768115942029" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2105978260869565" />
+        <entry key="app/src/main/res/layout/activity_delivery.xml" value="0.3088768115942029" />
+        <entry key="app/src/main/res/layout/activity_expired.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_item_details.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_item_in_stock.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_items_received.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_products.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="app/src/main/res/menu/tabs.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_supplies.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/tabs.xml" value="0.1" />
       </map>
     </option>
   </component>

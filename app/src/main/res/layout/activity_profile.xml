@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d8e2dc"
     tools:context=".Profile">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/vector" />
+
+    <TextView
+        android:id="@+id/usertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Profile "
+        android:textColor="#000"
+        android:textSize="24dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/naph" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="210dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Naphtali Makori "
+        android:textColor="#000"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="310dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Account Preferences "
+        android:textColor="#000"
+        android:textSize="18dp" />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="310dp"
+        android:src="@drawable/rightarrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="380dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Privacy &amp; Security "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/rightarrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="455dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Refer a company "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="455dp"
+        android:src="@drawable/rightarrow" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="570dp"
+        android:src="@drawable/logout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="570dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Logout "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+</RelativeLayout>

@@ -1,9 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Analysis">
+    android:background="#d8e2dc"
+    tools:context=".Profile">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/vector" />
+
+    <TextView
+        android:id="@+id/usertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Analysis "
+        android:textColor="#000"
+        android:textSize="24dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Daily Product Entry "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/line2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Weekly Product Entry"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="20dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="360dp"
+        android:src="@drawable/line2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="410dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Monthly Product Entry "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="410dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="20dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="460dp"
+        android:src="@drawable/line2" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="500dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="500dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Anually Product Entry "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+</RelativeLayout>
