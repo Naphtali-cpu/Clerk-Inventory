@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d8e2dc"
-    tools:context=".Supplies">
+    tools:context=".addition.AddDelivery">
 
     <ImageView
         android:id="@+id/back"
@@ -29,74 +29,79 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_gravity="center"
         android:layout_marginTop="250dp"
-        android:padding="25dp"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        android:padding="25dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product "
                 android:background="@drawable/rec"
-                android:textSize="19sp"
-                android:inputType="text"/>
+                android:hint="Product "
+                android:inputType="text"
+                android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/supplier"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Supplier "
                 android:background="@drawable/rec"
-                android:textSize="19sp"
-                android:inputType="text"/>
+                android:hint="Supplier "
+                android:inputType="text"
+                android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/destination"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Destination "
                 android:background="@drawable/rec"
-                android:textSize="19sp"
-                android:inputType="text"/>
+                android:hint="Destination "
+                android:inputType="text"
+                android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLoginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Date of Delivery "
                 android:background="@drawable/rec"
-                android:textSize="19sp"
-                android:inputType="date"/>
+                android:hint="Date of Delivery "
+                android:inputType="date"
+                android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/add_to_cart_bg"
             android:layout_marginStart="85dp"
             android:layout_marginTop="24dp"
-            android:text="Add"/>
+            android:background="@drawable/add_to_cart_bg"
+            android:text="Add" />
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

@@ -7,7 +7,7 @@
     <item
         android:id="@+id/suppliers"
         android:icon="@drawable/supp"
-        android:title= "Suppliers" />
+        android:title= "Buyers" />
     <item
         android:id="@+id/products"
         android:icon="@drawable/cubes"
