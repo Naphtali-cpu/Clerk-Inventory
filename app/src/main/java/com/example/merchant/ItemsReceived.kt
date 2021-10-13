@@ -20,16 +20,16 @@ class ItemsReceived : AppCompatActivity() {
         }
 
         val main = findViewById(R.id.back) as ImageView
-        val det = findViewById(R.id.item1) as CardView
+//        val det = findViewById(R.id.item1) as CardView
 
         main.setOnClickListener{
             val intent = Intent(this, Dashboard::class.java)
             startActivity(intent)
         }
 
-        det.setOnClickListener{
-            val intent = Intent(this, ItemDetails::class.java)
-            startActivity(intent)
-        }
+//        det.setOnClickListener{
+//            val intent = Intent(this, ItemDetails::class.java)
+//            startActivity(intent)
+//        }
     }
 }

@@ -22,43 +22,43 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        button.setOnClickListener {
-
-            val username = editTextUser.text.toString().trim()
-            val password = editTextPassword.text.toString().trim()
-
-            if(username.isEmpty()){
-                editTextUser.error = "Email required"
-                editTextPassword.requestFocus()
-                return@setOnClickListener
-            }
-
-
-            if(password.isEmpty()){
-                editTextPassword.error = "Password required"
-                editTextPassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            RetrofitClient.instance.userLogin(username, password)
-                .enqueue(object: Callback<LoginResponse> {
-                    override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                        Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-                    }
-
-                    override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-
-//                            SharedPrefManager.getInstance(applicationContext).saveUser(response.body()?.user!!)
-
-                        val intent = Intent(applicationContext, Dashboard::class.java)
-                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-
-                        startActivity(intent)
-
-
-                    }
-                })
-
-        }
+//        button.setOnClickListener {
+//
+//            val username = editTextUser.text.toString().trim()
+//            val password = editTextPassword.text.toString().trim()
+//
+//            if(username.isEmpty()){
+//                editTextUser.error = "Email required"
+//                editTextPassword.requestFocus()
+//                return@setOnClickListener
+//            }
+//
+//
+//            if(password.isEmpty()){
+//                editTextPassword.error = "Password required"
+//                editTextPassword.requestFocus()
+//                return@setOnClickListener
+//            }
+//
+//            RetrofitClient.instance.userLogin(username, password)
+//                .enqueue(object: Callback<LoginResponse> {
+//                    override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+//                        Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+//                    }
+//
+//                    override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+//
+////                            SharedPrefManager.getInstance(applicationContext).saveUser(response.body()?.user!!)
+//
+//                        val intent = Intent(applicationContext, Dashboard::class.java)
+//                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//
+//                        startActivity(intent)
+//
+//
+//                    }
+//                })
+//
+//        }
     }
 }
