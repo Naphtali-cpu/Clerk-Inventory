@@ -1,3 +1,8 @@
 package com.example.merchant.models
 
-data class User()
+data class User(
+    val id:Int,
+    val email:String,
+    val password: String,
+    val username: String
+)
