@@ -8,7 +8,7 @@ object RetrofitClient {
 
     private val AUTH = "Basic"
 
-    private const val BASE_URL = "https://sendyit.herokuapp.com/"
+    private const val BASE_URL = "https://stockinvent.herokuapp.com/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->

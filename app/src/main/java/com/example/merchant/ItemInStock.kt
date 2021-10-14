@@ -18,7 +18,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://naphnews.herokuapp.com/"
+const val BASE_URL = "https://stockinvent.herokuapp.com/"
 class ItemInStock : AppCompatActivity() {
     lateinit var myAdapter: MyAdapter
     lateinit var linearLayoutManager: LinearLayoutManager

@@ -11,12 +11,14 @@ import kotlinx.android.synthetic.main.items_instock_list.view.*
 
 class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var title: TextView
-        var content: TextView
+        var name: TextView
+        var slug: TextView
+        var created_date: TextView
 
         init {
-            title = itemView.item
-            content = itemView.brand
+            name = itemView.item
+            slug = itemView.brand
+            created_date = itemView.date
         }
 
     }
@@ -27,8 +29,9 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.content.text = userList[position].content
-        holder.title.text = userList[position].title
+        holder.name.text = userList[position].name
+        holder.slug.text = userList[position].slug
+        holder.created_date.text = userList[position].created_date
     }
 
     override fun getItemCount(): Int {
