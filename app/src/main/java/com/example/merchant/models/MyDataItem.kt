@@ -5,4 +5,4 @@ data class MyDataItem(
     val title: String,
     val content: String,
     val departmentId: Int
-)
+    )

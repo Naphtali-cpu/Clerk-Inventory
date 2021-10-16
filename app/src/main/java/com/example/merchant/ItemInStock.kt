@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.merchant.addition.AddItemsInStock
 import com.example.merchant.addition.AddItemsReceived
@@ -37,6 +38,13 @@ class ItemInStock : AppCompatActivity() {
             startActivity(intent)
         }
 
+//        val next = findViewById(R.id.c2) as CardView
+//        next.setOnClickListener{
+//            val intent = Intent(this, ItemDetails::class.java)
+//            startActivity(intent)
+//        }
+
+
         val main = findViewById(R.id.back) as ImageView
 
         main.setOnClickListener{
@@ -58,7 +66,6 @@ class ItemInStock : AppCompatActivity() {
             override fun onResponse(call: Call<List<MyDataItem>?>, response: Response<List<MyDataItem>?>) {
                 hideProgressBar()
                 val responseBody = response.body()!!
-
                 myAdapter = MyAdapter(baseContext, responseBody)
                 myAdapter.notifyDataSetChanged()
                 recyclerViewItemInStock.adapter = myAdapter

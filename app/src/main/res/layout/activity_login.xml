@@ -38,10 +38,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextUser"
+                android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username "
+                android:hint="Email "
                 android:background="@drawable/rec"
                 android:textSize="19sp"
                 android:inputType="textEmailAddress"/>

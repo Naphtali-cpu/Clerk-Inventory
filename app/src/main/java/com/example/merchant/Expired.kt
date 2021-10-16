@@ -11,12 +11,6 @@ class Expired : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expired)
-        val expire = findViewById(R.id.itemexpired) as ImageView
-        expire.setOnClickListener{
-            val intent = Intent(this, AddExpiredItems::class.java)
-            startActivity(intent)
-        }
-
 
         val main = findViewById(R.id.back) as ImageView
 

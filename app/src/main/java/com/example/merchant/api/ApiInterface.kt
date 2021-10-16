@@ -15,17 +15,24 @@ interface ApiInterface {
     fun getData(): Call<List<MyDataItem>>
 
     @FormUrlEncoded
-    @POST("auth/api/v1/register/")
+    @POST("auth/register/")
     fun createUser(
+        @Field("first_name") first_name:String,
         @Field("email") email:String,
-        @Field("username") username:String,
         @Field("password") password:String
     ): Call<DefaultResponse>
 
+//    @FormUrlEncoded
+//    @POST("api/v1/product/")
+//    fun addProduct(
+//        @Field("name") name:String,
+//        @Field("slug") slug:String,
+//    ): Call<DefaultResponse>
+
     @FormUrlEncoded
-    @POST("auth/api/v1/login/")
+    @POST("auth/login/")
     fun userLogin(
-        @Field("username") username:String,
+        @Field("email") email:String,
         @Field("password") password: String
     ): Call<LoginResponse>
 }
