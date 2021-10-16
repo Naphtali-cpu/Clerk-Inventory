@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d8e2dc"
-    tools:context=".ItemInStock">
+    tools:context=".ItemDetails">
 
     <ImageView
         android:id="@+id/back"
@@ -77,6 +77,7 @@
         android:layout_marginStart="200dp"
         android:layout_marginTop="70dp"
         android:src="@drawable/btwin2" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,6 +95,17 @@
         android:layout_marginTop="300dp"
         android:fontFamily="@font/nunito_bold"
         android:text="3/10/2021 "
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="350dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Supplier: John Macharia "
         android:textColor="#000"
         android:textSize="24dp"
         android:textStyle="bold" />

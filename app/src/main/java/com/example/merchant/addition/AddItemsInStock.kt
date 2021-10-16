@@ -26,39 +26,39 @@ class AddItemsInStock : AppCompatActivity() {
             startActivity(intent)
         }
 
-        addstock.setOnClickListener {
-
-            val name = editTextEmail.text.toString().trim()
-            val slug = editTextPassword.text.toString().trim()
-
-
-            if(name.isEmpty()){
-                editTextEmail.error = "Email required"
-                editTextEmail.requestFocus()
-                return@setOnClickListener
-            }
-
-
-            if(slug.isEmpty()){
-                editTextPassword.error = "Password required"
-                editTextPassword.requestFocus()
-                return@setOnClickListener
-            }
-
-
-
-            RetrofitClient.instance.addProduct(name, slug)
-                .enqueue(object: Callback<DefaultResponse> {
-                    override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
-                        Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-                    }
-
-                    override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
-                        Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
-                    }
-
-                })
-
-        }
+//        addstock.setOnClickListener {
+//
+//            val name = editTextEmail.text.toString().trim()
+//            val slug = editTextPassword.text.toString().trim()
+//
+//
+//            if(name.isEmpty()){
+//                editTextEmail.error = "Email required"
+//                editTextEmail.requestFocus()
+//                return@setOnClickListener
+//            }
+//
+//
+//            if(slug.isEmpty()){
+//                editTextPassword.error = "Password required"
+//                editTextPassword.requestFocus()
+//                return@setOnClickListener
+//            }
+//
+//
+//
+//            RetrofitClient.instance.addProduct(name, slug)
+//                .enqueue(object: Callback<DefaultResponse> {
+//                    override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
+//                        Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+//                    }
+//
+//                    override fun onResponse(call: Call<DefaultResponse>, response: Response<DefaultResponse>) {
+//                        Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
+//                    }
+//
+//                })
+//
+//        }
     }
 }

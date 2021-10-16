@@ -11,7 +11,7 @@ import retrofit2.http.POST
 
 interface ApiInterface {
 
-    @GET("api/v1/product/")
+    @GET("news")
     fun getData(): Call<List<MyDataItem>>
 
     @FormUrlEncoded
@@ -22,13 +22,12 @@ interface ApiInterface {
         @Field("password") password:String
     ): Call<DefaultResponse>
 
-    @FormUrlEncoded
-    @POST("api/v1/product/")
-    fun addProduct(
-        @Field("name") name:String,
-        @Field("slug") slug:String,
-    ): Call<DefaultResponse>
-
+//    @FormUrlEncoded
+//    @POST("api/v1/product/")
+//    fun addProduct(
+//        @Field("name") name:String,
+//        @Field("slug") slug:String,
+//    ): Call<DefaultResponse>
 
     @FormUrlEncoded
     @POST("auth/login/")
