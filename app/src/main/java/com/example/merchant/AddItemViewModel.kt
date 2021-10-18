@@ -2,6 +2,7 @@ package com.demo.retrofithttpmethods
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.merchant.api.ApiInterface
 import com.example.merchant.models.MyDataItem
 import com.example.merchant.models.UserResponse
 import retrofit2.Call
@@ -20,7 +21,7 @@ class AddItemViewModel: ViewModel() {
 
 
     fun createNewStock(stock: MyDataItem) {
-        val retroService  = RetroInstance.getRetroInstance().create(RetroServiceInterface::class.java)
+        val retroService  = RetroInstance.getRetroInstance().create(ApiInterface::class.java)
         val call = retroService.createStock(stock)
         call.enqueue(object: Callback<UserResponse> {
             override fun onFailure(call: Call<UserResponse>, t: Throwable) {

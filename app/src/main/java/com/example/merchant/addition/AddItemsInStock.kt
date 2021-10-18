@@ -46,9 +46,9 @@ class AddItemsInStock : AppCompatActivity() {
         viewModel.getCreateNewStockObserver().observe(this, Observer <UserResponse?>{
 
             if(it  == null) {
-                Toast.makeText(this@AddItemsInStock, "Failed to create User", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@AddItemsInStock, "Failed to add Stock", Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(this@AddItemsInStock, "Successfully created User", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@AddItemsInStock, "Added Stock Successfully", Toast.LENGTH_LONG).show()
             }
         })
     }
