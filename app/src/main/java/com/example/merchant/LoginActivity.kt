@@ -47,8 +47,6 @@ class LoginActivity : AppCompatActivity() {
                     }
 
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-
-
 //                            SharedPrefManager.getInstance(applicationContext).saveUser(response.body()?.user!!)
 
                         val intent = Intent(applicationContext, Dashboard::class.java)

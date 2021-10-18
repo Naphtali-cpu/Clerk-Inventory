@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/c2"
     android:layout_width="370dp"
-    android:layout_height="116dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
-    android:layout_marginTop="110dp"
-    android:layout_marginBottom="100dp"
+    android:layout_marginTop="20dp"
     app:cardCornerRadius="5dp">
 
 
@@ -37,7 +36,7 @@
         android:layout_marginStart="130dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/nunito_light"
-        android:text="Brand: "
+        android:text="Sort No: "
         android:textColor="#000"
         android:textSize="17dp" />
 
@@ -45,10 +44,10 @@
         android:id="@+id/brand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="185dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/nunito_light"
-        android:text="B-Twin "
+        android:text="1 "
         android:textColor="#000"
         android:textSize="17dp" />
 

@@ -4,15 +4,12 @@ import com.example.merchant.models.DefaultResponse
 import com.example.merchant.models.LoginResponse
 import com.example.merchant.models.MyDataItem
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiInterface {
 
-    @GET("news")
-    fun getData(): Call<List<MyDataItem>>
+    @GET("api/v1/product/")
+    fun getData(@Header("Authorization") token: String): Call<List<MyDataItem>>
 
     @FormUrlEncoded
     @POST("auth/register/")
@@ -22,12 +19,8 @@ interface ApiInterface {
         @Field("password") password:String
     ): Call<DefaultResponse>
 
-//    @FormUrlEncoded
-//    @POST("api/v1/product/")
-//    fun addProduct(
-//        @Field("name") name:String,
-//        @Field("slug") slug:String,
-//    ): Call<DefaultResponse>
+    @POST("api/v1/product/")
+    fun addProduct(@Header("Authorization") token: String): Call<List<MyDataItem>>
 
     @FormUrlEncoded
     @POST("auth/login/")
