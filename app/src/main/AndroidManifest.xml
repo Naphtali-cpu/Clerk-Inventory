@@ -28,46 +28,46 @@
             android:name=".addition.AddProducts"
             android:exported="true" />
         <activity
-            android:name=".Profile"
+            android:name=".dashboardclass.Profile"
             android:exported="true" />
         <activity
-            android:name=".ItemDetails"
+            android:name=".details.ItemDetails"
             android:exported="true" />
         <activity
-            android:name=".Delivery"
+            android:name=".navigationbaractivities.Delivery"
             android:exported="true" />
         <activity
             android:name=".Orders"
             android:exported="true" />
         <activity
-            android:name=".Products"
+            android:name=".navigationbaractivities.Products"
             android:exported="true" />
         <activity
             android:name=".Buyer"
             android:exported="true" />
         <activity
-            android:name=".Supplies"
+            android:name=".navigationbaractivities.Supplies"
             android:exported="true" />
         <activity
-            android:name=".ItemInStock"
+            android:name=".dashboardclass.ItemInStock"
             android:exported="true" />
         <activity
-            android:name=".Expired"
+            android:name=".dashboardclass.Expired"
             android:exported="true" />
         <activity
-            android:name=".ItemsReceived"
+            android:name=".dashboardclass.ItemsReceived"
             android:exported="true" />
         <activity
-            android:name=".Analysis"
+            android:name=".dashboardclass.Analysis"
             android:exported="true" />
         <activity
-            android:name=".Dashboard"
+            android:name=".navigationbaractivities.Dashboard"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".auth.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -1,15 +1,16 @@
-package com.example.merchant
+package com.example.merchant.dashboardclass
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.example.merchant.R
+import com.example.merchant.navigationbaractivities.Dashboard
 
-class ItemDetails : AppCompatActivity() {
+class Analysis : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_item_details)
-
+        setContentView(R.layout.activity_analysis)
         val main = findViewById(R.id.back) as ImageView
 
         main.setOnClickListener{

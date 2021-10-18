@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.demo.retrofithttpmethods.AddItemViewModel
-import com.example.merchant.ItemInStock
+import com.example.merchant.viewmodels.AddItemViewModel
+import com.example.merchant.dashboardclass.ItemInStock
 import com.example.merchant.R
 import com.example.merchant.models.MyDataItem
 import com.example.merchant.models.UserResponse

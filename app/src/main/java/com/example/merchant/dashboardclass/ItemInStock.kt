@@ -1,4 +1,4 @@
-package com.example.merchant
+package com.example.merchant.dashboardclass
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.merchant.adapters.MyAdapter
+import com.example.merchant.R
 import com.example.merchant.addition.AddItemsInStock
-import com.example.merchant.addition.AddItemsReceived
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.models.MyDataItem
+import com.example.merchant.navigationbaractivities.Dashboard
 import kotlinx.android.synthetic.main.activity_item_in_stock.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

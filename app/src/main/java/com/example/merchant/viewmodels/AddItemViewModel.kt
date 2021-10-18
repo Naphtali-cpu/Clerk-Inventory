@@ -1,8 +1,9 @@
-package com.demo.retrofithttpmethods
+package com.example.merchant.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.merchant.api.ApiInterface
+import com.example.merchant.api.RetroInstance
 import com.example.merchant.models.MyDataItem
 import com.example.merchant.models.UserResponse
 import retrofit2.Call

@@ -1,4 +1,4 @@
-package com.example.merchant
+package com.example.merchant.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.merchant.R
 import com.example.merchant.models.MyDataItem
 import kotlinx.android.synthetic.main.items_instock_list.view.*
 

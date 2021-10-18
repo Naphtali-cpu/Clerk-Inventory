@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d8e2dc"
-    tools:context=".ItemInStock">
+    tools:context=".dashboardclass.ItemInStock">
 
     <ProgressBar
         android:id="@+id/progressBar"

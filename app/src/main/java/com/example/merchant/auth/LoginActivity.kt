@@ -1,12 +1,14 @@
-package com.example.merchant
+package com.example.merchant.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.example.merchant.R
 import com.example.merchant.api.RetrofitClient
 import com.example.merchant.models.LoginResponse
+import com.example.merchant.navigationbaractivities.Dashboard
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
