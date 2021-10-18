@@ -7,6 +7,13 @@
     android:background="#d8e2dc"
     tools:context=".dashboardclass.ItemsReceived">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
     <ImageView
         android:id="@+id/back"
         android:layout_width="27dp"
@@ -27,13 +34,18 @@
         android:textSize="24dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewItemsReceived"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:id="@+id/recyclerViewItemInStock"
+        android:layout_width="409dp"
+        android:layout_height="760dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="100dp"
-        />
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 <!--    <ImageView-->
 <!--        android:id="@+id/pic"-->
 <!--        android:layout_width="250dp"-->
@@ -53,12 +65,12 @@
 <!--        android:textColor="#000"-->
 <!--        android:textSize="24dp" />-->
 
-    <ImageView
-        android:id="@+id/itemreceive"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="700dp"
-        android:src="@drawable/add" />
+<!--    <ImageView-->
+<!--        android:id="@+id/itemreceive"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginStart="320dp"-->
+<!--        android:layout_marginTop="700dp"-->
+<!--        android:src="@drawable/add" />-->
 
 </RelativeLayout>

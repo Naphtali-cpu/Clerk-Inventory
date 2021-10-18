@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
     android:layout_marginTop="20dp"
+    android:fontFamily="@font/nunito_bold"
     app:cardCornerRadius="5dp">
 
 
@@ -63,11 +64,11 @@
         android:textSize="18dp" />
 
     <ImageView
-        android:layout_width="93.33dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/btwin" />
+        android:src="@drawable/packages" />
 
 
 </androidx.cardview.widget.CardView>
