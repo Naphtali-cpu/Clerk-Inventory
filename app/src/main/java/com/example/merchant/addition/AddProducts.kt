@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.merchant.Dashboard
+import com.example.merchant.navigationbaractivities.Dashboard
 import com.example.merchant.R
 
 class AddProducts : AppCompatActivity() {

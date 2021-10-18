@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../layout/custom_preview.xml" value="0.240625" />
+        <entry key="app/src/main/res/drawable/add.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/drawable/add_to_cart_bg.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/dash2.xml" value="0.34014300306435136" />
         <entry key="app/src/main/res/drawable/nav.xml" value="0.21574074074074073" />

@@ -1,4 +1,4 @@
-package com.example.merchant
+package com.example.merchant.dashboardclass
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,20 +6,23 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.merchant.adapters.MyAdapter
+import com.example.merchant.R
 import com.example.merchant.addition.AddItemsInStock
-import com.example.merchant.addition.AddItemsReceived
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.models.MyDataItem
+import com.example.merchant.navigationbaractivities.Dashboard
 import kotlinx.android.synthetic.main.activity_item_in_stock.*
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://naphnews.herokuapp.com/"
+const val BASE_URL = "https://one-stocks.herokuapp.com/"
 class ItemInStock : AppCompatActivity() {
     lateinit var myAdapter: MyAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
@@ -54,25 +57,33 @@ class ItemInStock : AppCompatActivity() {
     }
 
     private fun getMyData() {
+        val okhttpHttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+
+        val okHttpClient = OkHttpClient.Builder().addInterceptor(
+            okhttpHttpLoggingInterceptor
+        )
+
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
+            .client(okHttpClient.build())
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData()
-
-        retrofitData.enqueue(object : Callback<List<MyDataItem>?> {
-            override fun onResponse(call: Call<List<MyDataItem>?>, response: Response<List<MyDataItem>?>) {
+        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NjI2MjI1LCJqdGkiOiJlZWFhYmRmMWI4YzU0OTJjYWMwYzM2YWJmNTRiOTVlZSIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.pUmHhL4LaM8EPw6XKfn6bP3X83BwIUXBLtL5f-yzfMg").enqueue(object : Callback<List<MyDataItem>> {
+            override fun onResponse(call: Call<List<MyDataItem>>, response: Response<List<MyDataItem>>) {
                 hideProgressBar()
-                val responseBody = response.body()!!
-                myAdapter = MyAdapter(baseContext, responseBody)
-                myAdapter.notifyDataSetChanged()
-                recyclerViewItemInStock.adapter = myAdapter
-
+                if(response?.body() != null) {
+                    myAdapter = MyAdapter(baseContext, response.body()!!)
+                    recyclerViewItemInStock.adapter = myAdapter
+                    myAdapter.notifyDataSetChanged()
+                }
+//                val responseBody = response.body()
             }
 
-            override fun onFailure(call: Call<List<MyDataItem>?>, t: Throwable) {
+            override fun onFailure(call: Call<List<MyDataItem>>, t: Throwable) {
                 hideProgressBar()
                 Log.d("ItemInStock", "onFailure:" + t.message)
             }

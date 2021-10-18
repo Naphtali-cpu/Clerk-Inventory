@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d8e2dc"
-    tools:context=".Supplies">
+    tools:context=".navigationbaractivities.Supplies">
 
     <ImageView
         android:id="@+id/back"

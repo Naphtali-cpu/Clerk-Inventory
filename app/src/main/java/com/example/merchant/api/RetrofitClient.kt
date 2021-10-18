@@ -1,26 +1,31 @@
 package com.example.merchant.api
 
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    private val AUTH = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0MzM1NjY0LCJqdGkiOiJlZTVmZDlkMjYyN2Q0ZjQyODFkN2NiOWYwNGFmMWZlYiIsInVzZXJfaWQiOjEsInJvbGUiOiJTVVBQTElFUiIsInVzZXJuYW1lIjoibmFwaHRhbGk5MTlAZ21haWwuY29tIn0.YDZZqOXQRXG2P8g3fkxfXKM16oqzdvT-ncScsCQTlR0"
+    private val AUTH = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NjI2MjI1LCJqdGkiOiJlZWFhYmRmMWI4YzU0OTJjYWMwYzM2YWJmNTRiOTVlZSIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.pUmHhL4LaM8EPw6XKfn6bP3X83BwIUXBLtL5f-yzfMg"
 
-    private const val BASE_URL = "https://stockinvent.herokuapp.com/"
-
+    private const val BASE_URL = "https://one-stocks.herokuapp.com/"
+    val okhttpHttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+        level = HttpLoggingInterceptor.Level.BODY
+    }
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val original = chain.request()
 
             val requestBuilder = original.newBuilder()
                 .addHeader("Authorization", AUTH)
-                .method(original.method(), original.body())
+                .method(original.method, original.body)
 
             val request = requestBuilder.build()
             chain.proceed(request)
-        }.build()
+        }.addInterceptor(
+            okhttpHttpLoggingInterceptor
+        ).build()
 
     val instance: ApiInterface by lazy{
         val retrofit = Retrofit.Builder()
@@ -31,4 +36,6 @@ object RetrofitClient {
 
         retrofit.create(ApiInterface::class.java)
     }
+
+
 }

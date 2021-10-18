@@ -1,12 +1,12 @@
-package com.example.merchant
+package com.example.merchant.dashboardclass
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.cardview.widget.CardView
+import com.example.merchant.R
 import com.example.merchant.addition.AddItemsReceived
-import com.example.merchant.addition.AddProducts
+import com.example.merchant.navigationbaractivities.Dashboard
 
 class ItemsReceived : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
