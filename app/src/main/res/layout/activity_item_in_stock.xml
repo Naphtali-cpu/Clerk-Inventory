@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d8e2dc"
+    android:fontFamily="@font/nunito_bold"
     tools:context=".dashboardclass.ItemInStock">
 
     <ProgressBar
@@ -48,12 +49,18 @@
 
 
         <ImageView
-            android:id="@+id/itemstock"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="320dp"
             android:layout_marginTop="750dp"
-            android:src="@drawable/add2" />
+            android:src="@drawable/circle" />
+    <ImageView
+            android:id="@+id/itemstock"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="755dp"
+            android:src="@drawable/pluss" />
 
 
 
