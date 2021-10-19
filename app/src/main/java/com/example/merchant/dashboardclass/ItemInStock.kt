@@ -72,7 +72,7 @@ class ItemInStock : AppCompatActivity() {
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NjI2MjI1LCJqdGkiOiJlZWFhYmRmMWI4YzU0OTJjYWMwYzM2YWJmNTRiOTVlZSIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.pUmHhL4LaM8EPw6XKfn6bP3X83BwIUXBLtL5f-yzfMg").enqueue(object : Callback<List<MyDataItem>> {
+        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0Njk3ODcyLCJqdGkiOiI2ZGY1MDdiNjUxNDk0MDNjYTBmMTkyNzliYWE3YzM0YSIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.CiVdQD3JG4R_HOUkGPXEpfJPu18jwX5Bc5qFYqb04IU").enqueue(object : Callback<List<MyDataItem>> {
             override fun onResponse(call: Call<List<MyDataItem>>, response: Response<List<MyDataItem>>) {
                 hideProgressBar()
                 if(response?.body() != null) {

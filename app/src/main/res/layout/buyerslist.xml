@@ -11,44 +11,24 @@
 
 
     <TextView
+        android:id="@+id/buyername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Product: "
+        android:text="Naphtali Makori"
         android:textColor="#000"
         android:textSize="22dp" />
 
     <TextView
-        android:id="@+id/item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="Bike "
-        android:textColor="#000"
-        android:textSize="22dp" />
-
-    <TextView
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/nunito_light"
-        android:text="Sort No: "
-        android:textColor="#000"
-        android:textSize="17dp" />
-
-    <TextView
-        android:id="@+id/brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="45dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="1 "
+        android:text="Ngong Road "
         android:textColor="#000"
         android:textSize="17dp" />
 
@@ -63,13 +43,13 @@
         android:textColor="#000"
         android:textSize="18dp" />
 
-    <ImageView
-        android:id="@+id/prodimage"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagebuyer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/packages" />
+        android:layout_marginTop="15dp"
+        android:src="@drawable/profileimage" />
 
 
 </androidx.cardview.widget.CardView>

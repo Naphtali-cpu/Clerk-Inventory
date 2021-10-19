@@ -28,7 +28,7 @@ class Delivery : AppCompatActivity() {
                 R.id.suppliers -> {
                     startActivity(
                         Intent(
-                            applicationContext, Supplies::class.java
+                            applicationContext, Buyer::class.java
                         )
                     )
                     overridePendingTransition(0, 0)

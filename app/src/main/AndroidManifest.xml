@@ -46,7 +46,7 @@
             android:name=".Buyer"
             android:exported="true" />
         <activity
-            android:name=".navigationbaractivities.Supplies"
+            android:name=".navigationbaractivities.Buyer"
             android:exported="true" />
         <activity
             android:name=".dashboardclass.ItemInStock"
