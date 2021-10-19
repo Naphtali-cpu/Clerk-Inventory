@@ -21,7 +21,7 @@
         <entry key="app/src/main/res/layout/activity_delivery.xml" value="0.3088768115942029" />
         <entry key="app/src/main/res/layout/activity_expired.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/activity_item_details.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_item_in_stock.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_item_in_stock.xml" value="0.245014245014245" />
         <entry key="app/src/main/res/layout/activity_items_received.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_supplies.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/buyerslist.xml" value="0.291213768115942" />
         <entry key="app/src/main/res/layout/items_instock_list.xml" value="0.3265625" />
         <entry key="app/src/main/res/menu/tabs.xml" value="0.1" />
       </map>

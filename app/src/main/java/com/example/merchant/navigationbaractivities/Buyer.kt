@@ -8,12 +8,16 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.merchant.dashboardclass.Profile
 import com.example.merchant.R
+import com.example.merchant.adapters.BuyerAdapter
 import com.example.merchant.adapters.MyAdapter
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.dashboardclass.BASE_URL
+import com.example.merchant.models.Buyers
 import com.example.merchant.models.MyDataItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_item_in_stock.*
+import kotlinx.android.synthetic.main.activity_item_in_stock.progressBar
+import kotlinx.android.synthetic.main.activity_supplies.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -22,27 +26,20 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class Products : AppCompatActivity() {
-    lateinit var myAdapter: MyAdapter
+class Buyer : AppCompatActivity() {
+    lateinit var myAdapter: BuyerAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_products)
+        setContentView(R.layout.activity_supplies)
 
-        recyclerViewItemInStock.setHasFixedSize(true)
+        recyclerViewBuyers.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this)
-        recyclerViewItemInStock.layoutManager = linearLayoutManager
+        recyclerViewBuyers.layoutManager = linearLayoutManager
         getMyData()
 
-//        val addproduct = findViewById(R.id.addproduct) as ImageView
-//        addproduct.setOnClickListener{
-//            val intent = Intent(this, AddProducts::class.java)
-//            startActivity(intent)
-//        }
-
-
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_bar)
-        bottomNavigationView.selectedItemId = R.id.products
+        bottomNavigationView.selectedItemId = R.id.suppliers
         bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.profile -> {
@@ -54,21 +51,21 @@ class Products : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.products -> return@OnNavigationItemSelectedListener true
-                R.id.suppliers -> {
+                R.id.suppliers -> return@OnNavigationItemSelectedListener true
+                R.id.dashboard -> {
                     startActivity(
                         Intent(
-                            applicationContext, Buyer::class.java
+                            applicationContext, Dashboard::class.java
                         )
                     )
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
 
-                R.id.dashboard -> {
+                R.id.products -> {
                     startActivity(
                         Intent(
-                            applicationContext, Dashboard::class.java
+                            applicationContext, Products::class.java
                         )
                     )
                     overridePendingTransition(0, 0)
@@ -90,6 +87,7 @@ class Products : AppCompatActivity() {
             false
         })
     }
+
     private fun getMyData() {
         val okhttpHttpLoggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
@@ -106,19 +104,19 @@ class Products : AppCompatActivity() {
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzExNjEwLCJqdGkiOiIyZmVkYzMxOTc4ZmQ0MWNjYmZhNTdmZDFlYWY4Mjc0NyIsInVzZXJfaWQiOjEzLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpLm1ha29yaUBzdHVkZW50Lm1vcmluZ2FzY2hvb2wuY29tIn0.PAPiwM48Pb23ch2aEX3Ji6usqfVnJMf85oo5pMKc0Yc").enqueue(object :
-            Callback<List<MyDataItem>> {
-            override fun onResponse(call: Call<List<MyDataItem>>, response: Response<List<MyDataItem>>) {
+        val retrofitData = retrofitBuilder.getBuyers("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzExNjEwLCJqdGkiOiIyZmVkYzMxOTc4ZmQ0MWNjYmZhNTdmZDFlYWY4Mjc0NyIsInVzZXJfaWQiOjEzLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpLm1ha29yaUBzdHVkZW50Lm1vcmluZ2FzY2hvb2wuY29tIn0.PAPiwM48Pb23ch2aEX3Ji6usqfVnJMf85oo5pMKc0Yc").enqueue(object :
+            Callback<List<Buyers>> {
+            override fun onResponse(call: Call<List<Buyers>>, response: Response<List<Buyers>>) {
                 hideProgressBar()
                 if(response?.body() != null) {
-                    myAdapter = MyAdapter(baseContext, response.body()!!)
-                    recyclerViewItemInStock.adapter = myAdapter
+                    myAdapter = BuyerAdapter(baseContext, response.body()!!)
+                    recyclerViewBuyers.adapter = myAdapter
                     myAdapter.notifyDataSetChanged()
                 }
 //                val responseBody = response.body()
             }
 
-            override fun onFailure(call: Call<List<MyDataItem>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Buyers>>, t: Throwable) {
                 hideProgressBar()
                 Log.d("ItemInStock", "onFailure:" + t.message)
             }
@@ -128,4 +126,5 @@ class Products : AppCompatActivity() {
     private fun hideProgressBar() {
         progressBar.setVisibility(View.GONE)
     }
+
 }
