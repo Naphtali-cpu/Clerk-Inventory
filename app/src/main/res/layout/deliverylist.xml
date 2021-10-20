@@ -13,47 +13,68 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Product: "
+        android:text="Receiver: "
         android:textColor="#000"
         android:textSize="22dp" />
 
     <TextView
-        android:id="@+id/item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="Bike "
-        android:textColor="#000"
-        android:textSize="22dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="45dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Sort No: "
-        android:textColor="#000"
-        android:textSize="17dp" />
-
-    <TextView
-        android:id="@+id/brand"
+        android:id="@+id/receivername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Naphtali Makori"
+        android:textColor="#000"
+        android:textSize="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/nunito_light"
-        android:text="1 "
+        android:text="Item: "
         android:textColor="#000"
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/itemreceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Laptops"
+        android:textColor="#000"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Courier: "
+        android:textColor="#000"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/couriername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="DHL"
+        android:textColor="#000"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/deliverytime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="270dp"
@@ -70,22 +91,5 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/packages" />
-
-    <ImageView
-        android:id="@+id/update"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/update" />
-
-    <ImageView
-        android:id="@+id/delete"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="110dp"
-        android:src="@drawable/delete" />
-
 
 </androidx.cardview.widget.CardView>

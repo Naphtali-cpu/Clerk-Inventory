@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.merchant.viewmodels.AddItemViewModel
 import com.example.merchant.dashboardclass.ItemInStock
 import com.example.merchant.R
-import com.example.merchant.models.MyDataItem
-import com.example.merchant.models.UserResponse
+import com.example.merchant.data.models.MyDataItem
+import com.example.merchant.data.models.UserResponse
 import kotlinx.android.synthetic.main.activity_add_items_in_stock.*
 
 class AddItemsInStock : AppCompatActivity() {

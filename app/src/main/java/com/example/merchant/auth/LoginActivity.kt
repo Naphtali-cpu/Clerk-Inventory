@@ -7,8 +7,9 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.merchant.R
 import com.example.merchant.api.RetrofitClient
-import com.example.merchant.models.LoginResponse
+import com.example.merchant.data.models.LoginResponse
 import com.example.merchant.navigationbaractivities.Dashboard
+//import com.example.merchant.data.storage.SharedPrefManager
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback

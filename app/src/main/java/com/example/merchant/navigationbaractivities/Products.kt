@@ -11,7 +11,7 @@ import com.example.merchant.R
 import com.example.merchant.adapters.MyAdapter
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.dashboardclass.BASE_URL
-import com.example.merchant.models.MyDataItem
+import com.example.merchant.data.models.MyDataItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_item_in_stock.*
 import okhttp3.OkHttpClient
@@ -106,7 +106,7 @@ class Products : AppCompatActivity() {
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzExNjEwLCJqdGkiOiIyZmVkYzMxOTc4ZmQ0MWNjYmZhNTdmZDFlYWY4Mjc0NyIsInVzZXJfaWQiOjEzLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpLm1ha29yaUBzdHVkZW50Lm1vcmluZ2FzY2hvb2wuY29tIn0.PAPiwM48Pb23ch2aEX3Ji6usqfVnJMf85oo5pMKc0Yc").enqueue(object :
+        val retrofitData = retrofitBuilder.getData("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzcxNDUzLCJqdGkiOiI4NWYzZWE2NTA0ZDk0YjI2YjFiZjgyOTVhOWE1ZTkyYyIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.byieEawL1gMgas0A5gPZywbPL8aHr3tpPjO0VteMz7Y").enqueue(object :
             Callback<List<MyDataItem>> {
             override fun onResponse(call: Call<List<MyDataItem>>, response: Response<List<MyDataItem>>) {
                 hideProgressBar()

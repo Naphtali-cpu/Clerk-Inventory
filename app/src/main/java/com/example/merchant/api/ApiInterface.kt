@@ -1,6 +1,6 @@
 package com.example.merchant.api
 
-import com.example.merchant.models.*
+import com.example.merchant.data.models.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -11,6 +11,9 @@ interface ApiInterface {
 
     @GET("api/v1/buyer/")
     fun getBuyers(@Header("Authorization") token: String): Call<List<Buyers>>
+
+    @GET("api/v1/delivery/")
+    fun getDelivery(@Header("Authorization") token: String): Call<List<Deliveries>>
 
     @FormUrlEncoded
     @POST("auth/register/")
@@ -28,9 +31,9 @@ interface ApiInterface {
     ): Call<LoginResponse>
 
     @POST("api/v1/product/")
-    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0Njk3ODcyLCJqdGkiOiI2ZGY1MDdiNjUxNDk0MDNjYTBmMTkyNzliYWE3YzM0YSIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.CiVdQD3JG4R_HOUkGPXEpfJPu18jwX5Bc5qFYqb04IU")
+    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzcxNDUzLCJqdGkiOiI4NWYzZWE2NTA0ZDk0YjI2YjFiZjgyOTVhOWE1ZTkyYyIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.byieEawL1gMgas0A5gPZywbPL8aHr3tpPjO0VteMz7Y")
     fun createStock(@Body params: MyDataItem): Call<UserResponse>
 
     @DELETE("api/v1/product/{id}/")
-    fun deleteStock(@Path("id") id: Int) : Call<Unit>
+    fun deleteStock(@Path("sortno") id: Int) : Call<Unit>
 }
