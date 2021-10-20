@@ -22,7 +22,7 @@ class DeliveryAdapter(val context: Context, val userList: List<Deliveries>): Rec
         var time: TextView
 
         init {
-            name = itemView.couriername
+            name = itemView.receivername
             item = itemView.itemreceived
             sender = itemView.couriername
             time = itemView.deliverytime
