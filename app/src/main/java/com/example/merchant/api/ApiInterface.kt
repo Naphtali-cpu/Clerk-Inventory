@@ -1,5 +1,6 @@
 package com.example.merchant.api
 
+import android.text.Editable
 import com.example.merchant.data.models.*
 import retrofit2.Call
 import retrofit2.http.*
@@ -34,6 +35,19 @@ interface ApiInterface {
     @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzcxNDUzLCJqdGkiOiI4NWYzZWE2NTA0ZDk0YjI2YjFiZjgyOTVhOWE1ZTkyYyIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.byieEawL1gMgas0A5gPZywbPL8aHr3tpPjO0VteMz7Y")
     fun createStock(@Body params: MyDataItem): Call<UserResponse>
 
+    @FormUrlEncoded
+    @POST("api/v1/delivery/")
+    fun createDelivery(
+        @Field("id") id: String,
+        @Field("name") name: String,
+        @Field("order") order: String,
+        @Field("courier_name") courier_name: String,
+        @Field("slug") slug: String
+    ): Call<Deliveries>
+
     @DELETE("api/v1/product/{id}/")
-    fun deleteStock(@Path("sortno") id: Int) : Call<Unit>
+    fun deleteStock(@Path("id") id: Int) : Call<Int>
+
+    @DELETE("api/v1/deliveriy/{id}/")
+    fun deleteDelivery(@Path("id") id: Int) : Call<Unit>
 }

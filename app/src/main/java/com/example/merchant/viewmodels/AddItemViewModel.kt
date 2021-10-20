@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.api.RetroInstance
+import com.example.merchant.data.models.Deliveries
 import com.example.merchant.data.models.MyDataItem
 import com.example.merchant.data.models.UserResponse
 import retrofit2.Call
@@ -38,6 +39,7 @@ class AddItemViewModel: ViewModel() {
             }
         })
     }
+
 
 
 }

@@ -6,5 +6,6 @@ data class Deliveries(
     val order: String,
     val courier_name: String,
     val created_date: String,
-    val slug: String
+    val slug: String?
 )
+

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,19 +29,17 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 const val BASE_URL = "https://one-stocks.herokuapp.com/"
+const val ARG_ITEM_ID = "item_id"
+
 class ItemInStock : AppCompatActivity() {
     lateinit var myAdapter: MyAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_in_stock)
-        val bundle: Bundle? = intent.extras
 
-//        (bundle?.containsKey(ARG_ITEM_ID)!!)
-
-            val id = intent.getIntExtra(ARG_ITEM_ID, 0)
-
-            initDeleteButton(id)
+        val id = intent.getIntExtra(ARG_ITEM_ID, 0)
+//        initDeleteButton(id)
 
 
         recyclerViewItemInStock.setHasFixedSize(true)
@@ -69,29 +68,31 @@ class ItemInStock : AppCompatActivity() {
         }
     }
 
-    private fun initDeleteButton(id: Int) {
-        delete.setOnClickListener {
-            val product = ServiceBuilder.buildService(ApiInterface::class.java)
-            val requestCall = product.deleteStock(id)
-
-            requestCall.enqueue(object: Callback<Unit> {
-
-                override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
-                    if (response.isSuccessful) {
-                        finish() // Move back to DestinationListActivity
-                        Toast.makeText(this@ItemInStock, "Successfully Deleted", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(this@ItemInStock, "Failed to Delete", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                override fun onFailure(call: Call<Unit>, t: Throwable) {
-                    Toast.makeText(this@ItemInStock, "Failed to Delete", Toast.LENGTH_SHORT).show()
-                }
-            })
-        }
-
-    }
+//    private fun initDeleteButton(id: Int) {
+//        val delete = findViewById(R.id.delete) as ImageButton
+//        delete?.setOnClickListener {
+//
+//            val destinationService = ServiceBuilder.buildService(ApiInterface::class.java)
+//            val requestCall = destinationService.deleteStock(id)
+//
+//            requestCall.enqueue(object: Callback<Unit> {
+//
+//                override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
+//                    if (response.isSuccessful) {
+//                        finish() // Move back to DestinationListActivity
+//                        Toast.makeText(this@ItemInStock, "Successfully Deleted", Toast.LENGTH_SHORT).show()
+//                    } else {
+//                        Toast.makeText(this@ItemInStock, "Failed to Delete", Toast.LENGTH_SHORT).show()
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<Unit>, t: Throwable) {
+//                    Toast.makeText(this@ItemInStock, "Failed to Delete", Toast.LENGTH_SHORT).show()
+//                }
+//            })
+//        }
+//
+//    }
 
     private fun getMyData() {
         val okhttpHttpLoggingInterceptor = HttpLoggingInterceptor().apply {
@@ -117,7 +118,6 @@ class ItemInStock : AppCompatActivity() {
                     recyclerViewItemInStock.adapter = myAdapter
                     myAdapter.notifyDataSetChanged()
                 }
-//                val responseBody = response.body()
             }
 
             override fun onFailure(call: Call<List<MyDataItem>>, t: Throwable) {
@@ -131,8 +131,4 @@ class ItemInStock : AppCompatActivity() {
         progressBar.setVisibility(View.GONE)
     }
 
-    companion object {
-
-        const val ARG_ITEM_ID = "item_id"
-    }
 }
