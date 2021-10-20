@@ -1,4 +1,4 @@
-package com.example.merchant.models
+package com.example.merchant.data.models
 
 data class MyDataItem(
     val id: Int,

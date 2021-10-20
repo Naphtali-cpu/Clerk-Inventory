@@ -3,15 +3,43 @@ package com.example.merchant.navigationbaractivities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.merchant.R
+import com.example.merchant.adapters.BuyerAdapter
+import com.example.merchant.adapters.DeliveryAdapter
 import com.example.merchant.addition.AddDelivery
+import com.example.merchant.api.ApiInterface
+import com.example.merchant.dashboardclass.BASE_URL
+import com.example.merchant.data.models.Buyers
+import com.example.merchant.data.models.Deliveries
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_delivery.*
+import kotlinx.android.synthetic.main.activity_item_in_stock.*
+import kotlinx.android.synthetic.main.activity_supplies.*
+import kotlinx.android.synthetic.main.activity_supplies.progressBar
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class Delivery : AppCompatActivity() {
+
+    lateinit var myAdapter: DeliveryAdapter
+    lateinit var linearLayoutManager: LinearLayoutManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_delivery)
+
+        recyclerViewDelivery.setHasFixedSize(true)
+        linearLayoutManager = LinearLayoutManager(this)
+        recyclerViewDelivery.layoutManager = linearLayoutManager
+        getMyData()
 
         val addel = findViewById(R.id.adddelivery) as ImageView
         addel.setOnClickListener{
@@ -57,5 +85,44 @@ class Delivery : AppCompatActivity() {
             }
             false
         })
+    }
+
+    private fun getMyData() {
+        val okhttpHttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+
+        val okHttpClient = OkHttpClient.Builder().addInterceptor(
+            okhttpHttpLoggingInterceptor
+        )
+
+        val retrofitBuilder = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .client(okHttpClient.build())
+            .build()
+            .create(ApiInterface::class.java)
+
+        val retrofitData = retrofitBuilder.getDelivery("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzcxNDUzLCJqdGkiOiI4NWYzZWE2NTA0ZDk0YjI2YjFiZjgyOTVhOWE1ZTkyYyIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.byieEawL1gMgas0A5gPZywbPL8aHr3tpPjO0VteMz7Y").enqueue(object :
+            Callback<List<Deliveries>> {
+            override fun onResponse(call: Call<List<Deliveries>>, response: Response<List<Deliveries>>) {
+                hideProgressBar()
+                if(response?.body() != null) {
+                    myAdapter = DeliveryAdapter(baseContext, response.body()!!)
+                    recyclerViewDelivery.adapter = myAdapter
+                    myAdapter.notifyDataSetChanged()
+                }
+//                val responseBody = response.body()
+            }
+
+            override fun onFailure(call: Call<List<Deliveries>>, t: Throwable) {
+                hideProgressBar()
+                Log.d("ItemInStock", "onFailure:" + t.message)
+            }
+        })
+    }
+
+    private fun hideProgressBar() {
+        progressBar.setVisibility(View.GONE)
     }
 }

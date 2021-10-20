@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import com.example.merchant.R
+import com.example.merchant.auth.LoginActivity
 import com.example.merchant.navigationbaractivities.Dashboard
 
 class Profile : AppCompatActivity() {
@@ -15,6 +16,13 @@ class Profile : AppCompatActivity() {
 
         main.setOnClickListener{
             val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+        }
+
+        val exit = findViewById(R.id.logout) as ImageView
+
+        exit.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

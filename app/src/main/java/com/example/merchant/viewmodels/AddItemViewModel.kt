@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.api.RetroInstance
-import com.example.merchant.models.MyDataItem
-import com.example.merchant.models.UserResponse
+import com.example.merchant.data.models.MyDataItem
+import com.example.merchant.data.models.UserResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

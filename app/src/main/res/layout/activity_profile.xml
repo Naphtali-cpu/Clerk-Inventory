@@ -43,71 +43,159 @@
         android:textColor="#000"
         android:textSize="24dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="310dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Account Preferences "
-        android:textColor="#000"
-        android:textSize="18dp" />
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="310dp"
-        android:src="@drawable/rightarrow" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pref"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="270dp"
+        app:cardBackgroundColor="#f5f6f9"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="380dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Privacy &amp; Security "
-        android:textColor="#000"
-        android:textSize="18dp" />
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="380dp"
-        android:src="@drawable/rightarrow" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Account Preferences"
+            android:textColor="#000"
+            android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="455dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Refer a company "
-        android:textColor="#000"
-        android:textSize="18dp" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/pref" />
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="455dp"
-        android:src="@drawable/rightarrow" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rightarrow" />
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="330dp"
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/security"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="370dp"
+        app:cardBackgroundColor="#f5f6f9"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Privacy &amp; Security"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/lock" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rightarrow" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/help"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="470dp"
+        app:cardBackgroundColor="#f5f6f9"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Help Center"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/help" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rightarrow" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logout"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="570dp"
-        android:src="@drawable/logout" />
+        android:layout_marginBottom="100dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardBackgroundColor="#f5f6f9"
+        app:cardCornerRadius="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="570dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Logout "
-        android:textColor="#000"
-        android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Logout"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/exit" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rightarrow" />
+
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
