@@ -42,7 +42,7 @@ class AddDelivery : AppCompatActivity() {
                     }
 
                     override fun onResponse(call: Call<Deliveries>, response: Response<Deliveries>) {
-                        Toast.makeText(applicationContext, "Responded!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Created !", Toast.LENGTH_LONG).show()
                     }
 
                 })

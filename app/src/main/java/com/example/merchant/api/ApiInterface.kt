@@ -1,6 +1,5 @@
 package com.example.merchant.api
 
-import android.text.Editable
 import com.example.merchant.data.models.*
 import retrofit2.Call
 import retrofit2.http.*
@@ -32,7 +31,7 @@ interface ApiInterface {
     ): Call<LoginResponse>
 
     @POST("api/v1/product/")
-    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0NzcxNDUzLCJqdGkiOiI4NWYzZWE2NTA0ZDk0YjI2YjFiZjgyOTVhOWE1ZTkyYyIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.byieEawL1gMgas0A5gPZywbPL8aHr3tpPjO0VteMz7Y")
+    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM0ODUxMzE3LCJqdGkiOiJlOWNlY2MwYjcyZjA0NjVkYTYyYzkwMDNlNzdlYmQ4ZCIsInVzZXJfaWQiOjEyLCJyb2xlIjoiU1VQUExJRVIiLCJ1c2VybmFtZSI6Im5hcGh0YWxpOTE5QGdtYWlsLmNvbSJ9.TB9VoKba1FZ_7QK10BVVVsm9dJcWYw6FfZjWhfWgYAs")
     fun createStock(@Body params: MyDataItem): Call<UserResponse>
 
     @FormUrlEncoded
@@ -46,7 +45,16 @@ interface ApiInterface {
     ): Call<Deliveries>
 
     @DELETE("api/v1/product/{id}/")
-    fun deleteStock(@Path("id") id: Int) : Call<Int>
+    fun deleteStock(@Path("id") id: Int) : Call<Unit>
+
+    @FormUrlEncoded
+    @PUT("api/v1/product/{id}/")
+    fun updateStock(
+        @Path("id") id: Int,
+        @Field("name") name: String,
+        @Field("slug") slug: String,
+        @Field("sortno") sortno: String,
+    ): Call<MyDataItem>
 
     @DELETE("api/v1/deliveriy/{id}/")
     fun deleteDelivery(@Path("id") id: Int) : Call<Unit>
