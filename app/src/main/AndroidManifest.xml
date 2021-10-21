@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.merchant">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Merchant">
+        <activity
+            android:name=".update.UpdateProduct"
+            android:exported="true" />
         <activity
             android:name=".addition.AddItemsInStock"
             android:exported="true" />
@@ -41,9 +44,6 @@
             android:exported="true" />
         <activity
             android:name=".navigationbaractivities.Products"
-            android:exported="true" />
-        <activity
-            android:name=".Buyer"
             android:exported="true" />
         <activity
             android:name=".navigationbaractivities.Buyer"
