@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_splash_scene"
     tools:context=".MainActivity"
-    android:background="#d8e2dc">
+    android:id="@+id/motionLayout"
+    android:background="@drawable/gradient"
+    android:paddingTop="24dp">
 
     <ImageView
-        android:id="@+id/iv_note"
+        android:id="@+id/logoImageView"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:src="@drawable/inventory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:fontFamily="@font/nunito_bold"
+        android:text="StockInvent"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="#001233"
+        android:textSize="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/copyrightTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:src="@drawable/inventory" />
+        android:alpha="0.0"
+        android:text="Copyright Naphtali"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textColor="#001233"
+        android:fontFamily="@font/nunito_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginStart="83dp"-->
-<!--        android:layout_marginTop="150dp"-->
-<!--        android:layout_marginBottom="192dp"-->
-<!--        android:fontFamily="@font/nunito_extrabold"-->
-<!--        android:text="Inventory "-->
-<!--        android:textColor="#001233"-->
-<!--        android:textSize="58dp"-->
-<!--        android:textStyle="bold" />-->
-
-</RelativeLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
