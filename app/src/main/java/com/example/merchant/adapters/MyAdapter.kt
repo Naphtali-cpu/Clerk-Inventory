@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.merchant.R
 import com.example.merchant.api.ApiInterface
 import com.example.merchant.api.ServiceBuilder
+import com.example.merchant.dashboardclass.ItemInStock
 import com.example.merchant.data.models.MyDataItem
 import com.example.merchant.navigationbaractivities.Dashboard
 import com.example.merchant.update.UpdateProduct
@@ -56,7 +57,8 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
 
                 override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
                     if (response.isSuccessful) {
-
+                        val intent = Intent(context, ItemInStock::class.java)
+                        context.startActivity(intent)
                     } else {
 //                        Toast.makeText(this@MyAdapter, "Failed to Delete", Toast.LENGTH_SHORT).show()
                     }
