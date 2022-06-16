@@ -37,5 +37,14 @@ object RetrofitClient {
         retrofit.create(ApiInterface::class.java)
     }
 
+    fun provideOkHttpClient(
+        tokenAuthenticator: TokenAuthenticator
+    ): OkHttpClient {
+
+        return OkHttpClient().newBuilder()
+            .authenticator(tokenAuthenticator)
+            .build()
+    }
+
 
 }

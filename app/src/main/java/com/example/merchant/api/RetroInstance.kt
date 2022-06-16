@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetroInstance {
+class  RetroInstance {
 
     companion object {
 
@@ -23,5 +23,6 @@ class RetroInstance {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
+
     }
 }
