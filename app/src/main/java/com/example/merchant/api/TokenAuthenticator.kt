@@ -2,7 +2,9 @@ package com.example.merchant.api
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import com.example.merchant.data.models.LoginResponse
+import com.example.merchant.sessions.SessionManager
 import com.example.merchant.sessions.SharedPrefApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
@@ -15,31 +17,27 @@ import javax.inject.Inject
 
 class TokenAuthenticator @Inject constructor(
     context: Context,
-    private val tokenApi: ApiInterface,
+    private val sessionManager: SessionManager,
     private val retrofit: RetroInstance
 ) : Authenticator {
 
     private val logger = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     private val appContext = context.applicationContext
     private val BASE_REFRESH = "https://one-stocks.herokuapp.com/"
-    private val userPreferences = SharedPrefApi(appContext)
     override fun authenticate(route: Route?, response: Response): Request? {
-        runBlocking {
-            val tokenResponse = getUpdatedToken()
-            when {
-                response.code == 403 || response.code == 401 -> {
-                    userPreferences.saveAccessTokens(
-                        tokenResponse.access,
-                        tokenResponse.refresh
-                    )
-                }
-            }
+        val tokenResponse = getUpdatedToken()
+        if (response.code == 403 || response.code == 401) {
+            sessionManager.saveAuthToken(tokenResponse.access)
+        } else {
+            Toast.makeText(appContext, response.message, Toast.LENGTH_LONG).show()
         }
+
+
         return null
     }
 
 
-    private suspend fun getUpdatedToken(): LoginResponse {
+    private fun getUpdatedToken(): LoginResponse {
         val okHttpClient = OkHttpClient().newBuilder()
             .addInterceptor(logger)
             .build()
@@ -47,11 +45,11 @@ class TokenAuthenticator @Inject constructor(
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_REFRESH)
             .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
 
 
-        val refreshToken = userPreferences.refreshToken.first()
+        val refreshToken = sessionManager.fetchAuthToken()
         val service = retrofit.create(ApiInterface::class.java).refreshToken(refreshToken!!)
         Log.i("AUTH", service.toString())
         return service
